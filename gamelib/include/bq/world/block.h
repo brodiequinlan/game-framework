@@ -10,12 +10,13 @@ namespace bq {
 		size_t m_damage = 0;
 	public:
 		
-		virtual bool intersects(sf::FloatRect& other){  
-			sf::FloatRect rect = { m_pos.x, m_pos.y, m_size.x, m_size.y };
+		virtual bool intersects(const sf::FloatRect& other) const
+		{
+			sf::FloatRect rect(m_pos, m_size);
 			return rect.intersects(other);
 		}
 		virtual bool contains(float x, float y) {
-			sf::FloatRect rect = { m_pos.x, m_pos.y, m_size.x, m_size.y };
+			sf::FloatRect rect(m_pos, m_size);
 			return rect.contains({ x,y });
 		}
 		virtual void update() = 0;

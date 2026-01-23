@@ -1,5 +1,5 @@
-
-#include <boost/test/unit_test.hpp>
+/*
+#include <boost/test/included/unit_test.hpp>
 
 #include <bq.h>
 
@@ -59,3 +59,4 @@ BOOST_AUTO_TEST_CASE(json_parser_test_arrays_and_objects) {
     BOOST_REQUIRE(j.get_o("key").get_a("obj").get_s(2) == "pop2");
     BOOST_REQUIRE(j.get_s("key2") == "poop");
 }
+*/

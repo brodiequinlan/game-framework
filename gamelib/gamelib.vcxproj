@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{961EA0E6-02FE-1E82-0B16-AA58777485E3}</ProjectGuid>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>gamelib</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(ProjectDir)..\build\bin\Debug-windows-x86_64\gamelib\</OutDir>
+    <IntDir>$(ProjectDir)..\build\obj\Debug-windows-x86_64\gamelib\</IntDir>
+    <TargetName>gamelib</TargetName>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(ProjectDir)..\build\bin\Release-windows-x86_64\gamelib\</OutDir>
+    <IntDir>$(ProjectDir)..\build\obj\Release-windows-x86_64\gamelib\</IntDir>
+    <TargetName>gamelib</TargetName>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>bqpch.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>PLATFORM_WINDOWS;DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>include;\usr\include\SFML;vendor\include;..\vendor\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>bqpch.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>PLATFORM_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>include;\usr\include\SFML;vendor\include;..\vendor\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="include\bq.h" />
+    <ClInclude Include="include\bq\application\application.h" />
+    <ClInclude Include="include\bq\core\astar.h" />
+    <ClInclude Include="include\bq\core\buff.h" />
+    <ClInclude Include="include\bq\core\camera.h" />
+    <ClInclude Include="include\bq\core\game.h" />
+    <ClInclude Include="include\bq\core\handler.h" />
+    <ClInclude Include="include\bq\core\inventory.h" />
+    <ClInclude Include="include\bq\core\item.h" />
+    <ClInclude Include="include\bq\core\logger.h" />
+    <ClInclude Include="include\bq\core\profiler.h" />
+    <ClInclude Include="include\bq\entity\entity.h" />
+    <ClInclude Include="include\bq\entity\entity_manager.h" />
+    <ClInclude Include="include\bq\entity\particle.h" />
+    <ClInclude Include="include\bq\event\event.h" />
+    <ClInclude Include="include\bq\exception\illegal_state.h" />
+    <ClInclude Include="include\bq\graphics\animation.h" />
+    <ClInclude Include="include\bq\graphics\sprite.h" />
+    <ClInclude Include="include\bq\graphics\window.h" />
+    <ClInclude Include="include\bq\gui\Widget.h" />
+    <ClInclude Include="include\bq\gui\button.h" />
+    <ClInclude Include="include\bq\gui\health_bar.h" />
+    <ClInclude Include="include\bq\networking\http_client.h" />
+    <ClInclude Include="include\bq\networking\network_result.h" />
+    <ClInclude Include="include\bq\quest\quest.h" />
+    <ClInclude Include="include\bq\quest\quest_event.h" />
+    <ClInclude Include="include\bq\resource\resource_holder.h" />
+    <ClInclude Include="include\bq\resource\resource_manager.h" />
+    <ClInclude Include="include\bq\state\state.h" />
+    <ClInclude Include="include\bq\state\state_manager.h" />
+    <ClInclude Include="include\bq\util\block_collision_effects.h" />
+    <ClInclude Include="include\bq\util\json.h" />
+    <ClInclude Include="include\bq\util\noncopyable.h" />
+    <ClInclude Include="include\bq\util\nonmoveable.h" />
+    <ClInclude Include="include\bq\util\random.h" />
+    <ClInclude Include="include\bq\util\rect.h" />
+    <ClInclude Include="include\bq\util\settings.h" />
+    <ClInclude Include="include\bq\util\vec.h" />
+    <ClInclude Include="include\bq\world\block.h" />
+    <ClInclude Include="include\bq\world\world.h" />
+    <ClInclude Include="include\bqpch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\application\application.cpp" />
+    <ClCompile Include="source\bqpch.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="source\core\astar.cpp" />
+    <ClCompile Include="source\core\buff.cpp" />
+    <ClCompile Include="source\core\camera.cpp" />
+    <ClCompile Include="source\core\game.cpp" />
+    <ClCompile Include="source\core\handler.cpp" />
+    <ClCompile Include="source\core\inventory.cpp" />
+    <ClCompile Include="source\core\item.cpp" />
+    <ClCompile Include="source\core\logger.cpp" />
+    <ClCompile Include="source\core\profiler.cpp" />
+    <ClCompile Include="source\entity\entity.cpp" />
+    <ClCompile Include="source\entity\entity_manager.cpp" />
+    <ClCompile Include="source\entity\particle.cpp" />
+    <ClCompile Include="source\event\event.cpp" />
+    <ClCompile Include="source\exception\illegal_state.cpp" />
+    <ClCompile Include="source\graphics\animation.cpp" />
+    <ClCompile Include="source\graphics\sprite.cpp" />
+    <ClCompile Include="source\graphics\window.cpp" />
+    <ClCompile Include="source\gui\button.cpp" />
+    <ClCompile Include="source\gui\health_bar.cpp" />
+    <ClCompile Include="source\networking\http_client.cpp" />
+    <ClCompile Include="source\quest\quest.cpp" />
+    <ClCompile Include="source\quest\quest_event.cpp" />
+    <ClCompile Include="source\resource\resource_holder.cpp" />
+    <ClCompile Include="source\state\state_manager.cpp" />
+    <ClCompile Include="source\util\json_array.cpp" />
+    <ClCompile Include="source\util\random.cpp" />
+    <ClCompile Include="source\util\rect.cpp" />
+    <ClCompile Include="source\util\vec.cpp" />
+    <ClCompile Include="source\world\block.cpp" />
+    <ClCompile Include="source\world\world.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

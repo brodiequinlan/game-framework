@@ -60,7 +60,6 @@ public:
             #ifdef DEBUG
                 if(! (m_data.count(key) > 0)) bq::logger::critical(key + " does not exist in json!");
             #endif
-
             return std::stoi(m_data[key]);
         }
         bool get_b(const std::string& key){

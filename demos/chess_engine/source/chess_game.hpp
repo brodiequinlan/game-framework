@@ -17,7 +17,7 @@ class chess_game {
 	bool m_player_two = true;
 	bool m_checkmate = false;
 	bool m_draw = false;
-	bool m_auto_restart = false;
+	bool m_auto_restart = true;
 	bool* m_flipped;
 	int m_square_size;
 

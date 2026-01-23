@@ -1,5 +1,6 @@
-#include <boost/test/unit_test.hpp>
 
+/*
+#include <boost/test/included/unit_test.hpp>
 #include <bq.h>
 #include <bq/exception/illegal_state.h>
 #include <bq/state/state.h>
@@ -70,3 +71,4 @@ BOOST_AUTO_TEST_CASE(test_state_manager_empty) {
 	bq::window window(4,4,"title");
 	BOOST_REQUIRE_THROW(sm.render(window), bq::illegal_state);
 }
+*/

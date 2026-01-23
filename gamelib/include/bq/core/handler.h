@@ -1,5 +1,5 @@
 #pragma once
-
+#include <bqpch.h>
 namespace bq {
 	class handler {
 
@@ -19,6 +19,8 @@ namespace bq {
 		bq::state_manager* sm();
 		bq::camera* cam();
 		
+		bool has_cam();
+
 		inline static handler& get() {
 			static handler h;
 			return h;

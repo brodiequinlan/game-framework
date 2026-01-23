@@ -10,7 +10,7 @@ bq::window::window(unsigned w, unsigned h,const std::string& title):m_window({ w
 
 bq::v2f intl_get_mouse_pos(sf::Event& evt) {
 	bq::v2f offset = { 0,0 };
-	if (bq::handler::get().cam() != nullptr) {
+	if (bq::handler::get().has_cam()) {
 		offset = { bq::handler::get().cam()->view().getCenter().x - (bq::handler::get().cam()->view().getSize().x / 2)   , bq::handler::get().cam()->view().getCenter().y - (bq::handler::get().cam()->view().getSize().y / 2) };
 	}
 	bq::v2f pos = { (float)evt.mouseButton.x + offset.x, (float)evt.mouseButton.y + offset.y };

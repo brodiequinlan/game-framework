@@ -23,7 +23,7 @@ File col_to_file(int row, bool reversed)
 		case 3: f = File::EFILE; break;
 		case 2: f = File::FFILE; break;
 		case 1: f = File::GFILE; break;
-		case 0: f = File::HFILE; break;
+		case 0: f = File::H_FILE; break;
 		}
 		return f;
 	}
@@ -36,7 +36,7 @@ File col_to_file(int row, bool reversed)
 		case 4: f = File::EFILE; break;
 		case 5: f = File::FFILE; break;
 		case 6: f = File::GFILE; break;
-		case 7: f = File::HFILE; break;
+		case 7: f = File::H_FILE; break;
 	}
 	return f;
 }
@@ -69,9 +69,15 @@ Rank row_to_rank(int col, bool reversed)
 	}
 	return r;
 }
-GameProgress get_progress(int mv1, int mv2)
+GameProgress get_progress(Position& pos, int mv1, int mv2)
 {
-	return (mv1 <= 1300 && mv2 <= 1300) ? ENDGAME : MIDGAME;
+	bool no_queens =
+		!pos.bitboard_of(WHITE, QUEEN) &&
+		!pos.bitboard_of(BLACK, QUEEN);
+
+	return (no_queens && mv1 <= 1800 && mv2 <= 1800)
+		? ENDGAME
+		: MIDGAME;
 }
 std::string get_notation(Position& p, Move& move)
 {
@@ -180,11 +186,12 @@ bool detect_draw(const std::vector<std::string>& fens)
 
 	return found_times>2;
 }
-void log_search_statistics(search_statistics search_stats)
+void log_search_statistics(std::string st, search_statistics search_stats)
 {
 	float millions_of_nodes = roundf((float(search_stats.nodes_searched) / 1000000.0f) * 100) / 100;
 	float mnps = float(search_stats.nodes_searched) / float(search_stats.ellapsed_ms);
 	bq::logger::info("----------------------------------------------------------------------------------------------------------------------------");
+	bq::logger::info(st);
 	bq::logger::info("Depth Searched: " + std::to_string(search_stats.depth) + " - Nodes Searched : " + format_decimal(millions_of_nodes) + "M(" + std::to_string(search_stats.ellapsed_ms / 1000000) + "S)(" + format_decimal(mnps) + "MN / S) - Selective Depth reached : " + std::to_string(search_stats.quinscience_depth_reached) + " - Move Selection : " + search_stats.selected_move.str_d() + " - " + std::to_string(search_stats.score));
 	bq::logger::info("----------------------------------------------------------------------------------------------------------------------------");
 }

@@ -1,8 +1,6 @@
 #include "bqpch.h"
 
 
-#include <bq/application/application.h>
-
 
 
 int main(int argc, char* argv[]) 

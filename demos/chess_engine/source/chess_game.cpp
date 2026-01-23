@@ -1,10 +1,12 @@
 #include "chess_game.hpp"
 
-chess_game::chess_game(int sq_size, bool* flipped):
-		m_position("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"),
-		m_square_size(sq_size),
-		m_flipped(flipped),
-		m_move_sound(bq::resource_holder::get().sounds.get("move.wav"))
+chess_game::chess_game(int sq_size, bool* flipped) :
+    m_position("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"),
+    m_square_size(sq_size),
+    m_flipped(flipped),
+    m_move_sound(bq::resource_holder::get().sounds.get("move.wav")),
+    m_ai_white(true, search_type::V2),
+    m_ai_black(true, search_type::V2)
 {
     load_config();
     m_ai_future = std::async(std::launch::async, [this] {});
@@ -66,8 +68,8 @@ void chess_game::undo()
 void chess_game::update()
 {
     if (m_checkmate || m_draw) { 
-        if(!m_auto_restart) return;
-        else restart();
+        //if(!m_auto_restart) return;
+        restart();
     }
 
     if (!m_player_one && m_position.turn() == WHITE) 

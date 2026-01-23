@@ -18,27 +18,63 @@ project "chess_engine"
 	}
 	links
 	{
-		"gamelib",
-		"sfml-graphics",
-		"sfml-window",
-		"sfml-system",
-		"sfml-audio",
-		"sfml-network",
-		"openssl-1.1/ssl",
-		"openssl-1.1/crypto"
+		"gamelib"
 	}
 	includedirs
 	{
 		"../../gamelib/include",
-		"../../gamelib/vendor/include",
-		"%{IncludeDir.SFML}",
+		"../../gamelib/vendor/include"
 	}
 	filter "system:windows"
 		systemversion "latest"
 		defines{ "PLATFORM_WINDOWS" }
+		local vendor_root = "../../vendor"
+		local vendor_includes = vendor_root  .. "/include"
+		includedirs 
+		{ 
+			vendor_includes 
+		}
+		filter "configurations:Debug"
+			local vendor_libs = vendor_root .. "/lib"
+			libdirs 
+			{ 
+				vendor_libs 
+			}
+			links
+			{
+				"sfml-graphics-d",
+				"sfml-window-d",
+				"sfml-system-d",
+				"sfml-audio-d",
+				"sfml-network-d",
+				"libssl",
+				"libcrypto"
+			}
+		filter "configurations:Release"
+			local vendor_libs = vendor_root .. "/lib"
+			libdirs 
+			{ 
+				vendor_libs 
+			}
+			
+			links
+			{
+				"sfml-graphics",
+				"sfml-window",
+				"sfml-system",
+				"sfml-audio",
+				"sfml-network",
+				"libssl",
+				"libcrypto"
+			}
 	filter "system:linux"
 		systemversion "latest"
 		defines{ "PLATFORM_LINUX" }
+		links
+		{
+			"openssl-1.1/ssl",
+			"openssl-1.1/crypto"
+		}
 	
 	filter "configurations:Debug"
 		defines "DEBUG"

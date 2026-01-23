@@ -2,7 +2,6 @@
 
 #define CPPHTTPLIB_OPENSSL_SUPPORT
 #include <cpp-httplib/httplib.h>
-
 //sfml includes
 #include <SFML/Graphics.hpp>
 #include <SFML/Graphics/Texture.hpp>
@@ -32,14 +31,14 @@
 
 
 #include <bq/util/vec.h>
-#include <bq/graphics/window.h>
 #include <bq/core/astar.h>
 #include <bq/application/application.h>
-#include <bq/core/game.h>
 #include <bq/util/block_collision_effects.h>
 #include <bq/entity/entity.h>
 #include <bq/entity/entity_manager.h>
 #include <bq/core/buff.h>
+#include <bq/graphics/window.h>
+#include <bq/core/game.h>
 #include <bq/util/random.h>
 #include <bq/state/state.h>
 #include <bq/state/state_manager.h>
@@ -61,7 +60,7 @@
 #include <bq/networking/network_result.h>
 #include <bq/networking/http_client.h>
 #include <bq/core/handler.h>
-
+#include <bq/exception/illegal_state.h>
 
 #define INTL_HEIGHT 512
 #define INTL_WIDTH 900

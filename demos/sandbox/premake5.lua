@@ -14,13 +14,7 @@ project "sandbox"
 	}
     links
 	{
-        "gamelib",
-        "sfml-system",
-        "sfml-window",
-        "sfml-graphics",
-        "sfml-audio",
-		"openssl-1.1/ssl",
-		"openssl-1.1/crypto"
+        "gamelib"
 	}
     includedirs
 	{
@@ -33,9 +27,58 @@ project "sandbox"
 	filter "system:windows"
 		systemversion "latest"
 		defines{ "PLATFORM_WINDOWS" }
+		local vendor_root = "../../vendor"
+		local vendor_includes = vendor_root  .. "/include"
+		includedirs 
+		{ 
+			vendor_includes 
+		}
+		filter "configurations:Debug"
+			local vendor_libs = vendor_root .. "/lib"
+			libdirs 
+			{ 
+				vendor_libs 
+			}
+			links
+			{
+				"sfml-graphics-d",
+				"sfml-window-d",
+				"sfml-system-d",
+				"sfml-audio-d",
+				"sfml-network-d",
+				"libssl",
+				"libcrypto"
+			}
+		filter "configurations:Release"
+			local vendor_libs = vendor_root .. "/lib"
+			libdirs 
+			{ 
+				vendor_libs 
+			}
+			
+			links
+			{
+				"sfml-graphics",
+				"sfml-window",
+				"sfml-system",
+				"sfml-audio",
+				"sfml-network",
+				"libssl",
+				"libcrypto"
+			}
+
 	filter "system:linux"
 		systemversion "latest"
 		defines{ "PLATFORM_LINUX" }
+		links
+		{
+			"openssl-1.1/ssl",
+			"openssl-1.1/crypto",
+			"sfml-system",
+			"sfml-window",
+			"sfml-graphics",
+			"sfml-audio"
+		}
 		
 	filter "configurations:Debug"
 		defines "DEBUG"

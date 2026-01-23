@@ -7,9 +7,9 @@ project "gamelib"
 	targetdir ("%{wks.location}/build/bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("%{wks.location}/build/obj/" .. outputdir .. "/%{prj.name}")
 
-	pchheader "gamelib/include/bqpch.h"
-	pchsource "gamelib/source/bqpch.cpp"
-
+	pchheader "bqpch.h"
+	pchsource "source/bqpch.cpp"
+	
 	files
 	{
 		"include/**.h",
@@ -24,6 +24,13 @@ project "gamelib"
 	filter "system:windows"
 		systemversion "latest"
 		defines{ "PLATFORM_WINDOWS" }
+		local vendor_root = "../vendor"
+		local vendor_includes = vendor_root  .. "/include"
+		includedirs 
+		{ 
+			vendor_includes 
+		}
+		
 	filter "system:linux"
 		systemversion "latest"
 		defines{ "PLATFORM_LINUX" }

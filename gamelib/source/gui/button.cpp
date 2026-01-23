@@ -25,7 +25,7 @@ void bq::gui::Button::render(bq::window& window)
 {
 	bq::v2f offset = { 0,0 };
 
-	if (bq::handler::get().cam() != nullptr) {
+	if (bq::handler::get().has_cam()) {
 		offset = { bq::handler::get().cam()->view().getCenter().x - (bq::handler::get().cam()->view().getSize().x / 2)   , bq::handler::get().cam()->view().getCenter().y - (bq::handler::get().cam()->view().getSize().y / 2) };
 	}
 	
@@ -66,7 +66,7 @@ bq::gui::Button::Button(bq::v2f pos, bq::v2f size,std::string label, sf::Color o
 
 	m_text.setPosition(pos);
 
-
+	m_button.getGlobalBounds().width;
 	m_text.move(m_button.getGlobalBounds().width / 4.f,m_button.getGlobalBounds().height / 4.f);
 	m_text.setString(label);
 }

@@ -1,3 +1,4 @@
+#include <bqpch.h>
 #include <bq/event/event.h>
 #include <bq/state/state.h>
 #include <bq/entity/entity.h>
@@ -49,6 +50,9 @@ bq::state_manager* bq::handler::sm() {
     }
 #endif
     return m_sm.get();
+}
+bool bq::handler::has_cam() {
+    return !!m_cam;
 }
 bq::camera* bq::handler::cam() {
 #ifdef DEBUG

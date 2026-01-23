@@ -8,6 +8,7 @@
 #include <SFML/Graphics/Texture.hpp>
 #include <SFML/Graphics/Font.hpp>
 #include <SFML/Audio.hpp>
+
 //stl includes
 #include <stack>
 #include <map>
@@ -22,18 +23,19 @@
 #include <algorithm>
 #include <chrono>
 #include <bq/util/vec.h>
-#include <bq/graphics/window.h>
 #include <bq/core/astar.h>
 #include <bq/application/application.h>
-#include <bq/core/game.h>
 #include <bq/util/block_collision_effects.h>
 #include <bq/entity/entity.h>
+#include <bq/entity/entity_manager.h>
 #include <bq/core/buff.h>
+#include <bq/graphics/window.h>
+#include <bq/core/game.h>
 #include <bq/util/random.h>
 #include <bq/state/state.h>
+#include <bq/state/state_manager.h>
 #include <bq/core/item.h>
 #include <bq/resource/resource_holder.h>
-#include <bq/core/logger.h>
 #include <bq/core/camera.h>
 #include <bq/core/inventory.h>
 #include <bq/world/world.h>
@@ -50,6 +52,8 @@
 #include <bq/networking/network_result.h>
 #include <bq/networking/http_client.h>
 #include <bq/core/handler.h>
+#include <bq/exception/illegal_state.h>
+#include <bq/world/block.h>
 constexpr int GAME_HEIGHT = INTL_HEIGHT;
 constexpr int GAME_WIDTH = INTL_WIDTH;
 

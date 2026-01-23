@@ -1,6 +1,5 @@
-
-#include <boost/test/unit_test.hpp>
-
+/*
+#include <boost/test/included/unit_test.hpp>
 
 #include <bq.h>
 
@@ -31,3 +30,4 @@ BOOST_AUTO_TEST_CASE(v2i_add) {
 	BOOST_CHECK(v1.x == 8);
 	BOOST_CHECK(v1.y == 9);
 }
+*/

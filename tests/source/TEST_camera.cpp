@@ -1,8 +1,7 @@
-
-#include <boost/test/unit_test.hpp>
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
 
 #include <bq.h>
-
 
 
 class test_entity : public bq::entity {
@@ -21,24 +20,24 @@ public:
 	bool should_cull(const sf::View&) const override {return false;}
 	virtual ~test_entity() override {}
 };
-BOOST_AUTO_TEST_CASE(test_camera_construction) {
+TEST_CASE("test_camera_update") {
 
 	bq::entity* e = new test_entity();
 	bq::camera cam(e);
 	bq::v2f pos(GAME_WIDTH, GAME_HEIGHT);
-	BOOST_CHECK(cam.view().getSize().x == pos.x);
-	BOOST_CHECK(cam.view().getSize().y == pos.y);
+	CHECK(cam.view().getSize().x == pos.x);
+	CHECK(cam.view().getSize().y == pos.y);
 	delete e;
 }
-BOOST_AUTO_TEST_CASE(test_camera_update) {
+TEST_CASE("test_camera_update") {
 	bq::entity* e = new test_entity();
 	bq::camera cam(e);
 
 	for (unsigned i = 0; i < 100; ++i) {
 		e->update();
 		cam.update();
-		BOOST_CHECK(cam.view().getCenter().x == e->pos().x);
-		BOOST_CHECK(cam.view().getCenter().y == e->pos().y);
+		CHECK(cam.view().getCenter().x == e->pos().x);
+		CHECK(cam.view().getCenter().y == e->pos().y);
 	}
 	delete e;
 }

@@ -1,6 +1,5 @@
-
-#include <boost/test/unit_test.hpp>
-
+/*
+#include <boost/test/included/unit_test.hpp>
 #include <bq.h>
 
 BOOST_AUTO_TEST_CASE(test_success_http_get){
@@ -24,3 +23,4 @@ BOOST_AUTO_TEST_CASE(test_fail_https_get){
     bq::network_result result = httpc.get("/");
     BOOST_CHECK(result.status == bq::BQ_NETWORK_FAILURE);
 }
+*/

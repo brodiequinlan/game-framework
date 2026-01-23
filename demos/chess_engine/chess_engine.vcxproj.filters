@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="surge">
+      <UniqueIdentifier>{0B1D6210-7731-8AC1-40B3-2D21AC8686F2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\basic_search.hpp" />
+    <ClInclude Include="source\book.hpp" />
+    <ClInclude Include="source\chess_ai.hpp" />
+    <ClInclude Include="source\chess_game.hpp" />
+    <ClInclude Include="source\chess_utils.hpp" />
+    <ClInclude Include="source\evaluator.hpp" />
+    <ClInclude Include="source\mid_search.hpp" />
+    <ClInclude Include="source\move_ordering.hpp" />
+    <ClInclude Include="source\search.hpp" />
+    <ClInclude Include="source\search_v2.hpp" />
+    <ClInclude Include="source\surge\position.h">
+      <Filter>surge</Filter>
+    </ClInclude>
+    <ClInclude Include="source\surge\surge.h">
+      <Filter>surge</Filter>
+    </ClInclude>
+    <ClInclude Include="source\surge\tables.h">
+      <Filter>surge</Filter>
+    </ClInclude>
+    <ClInclude Include="source\surge\types.h">
+      <Filter>surge</Filter>
+    </ClInclude>
+    <ClInclude Include="source\transposition_table.hpp" />
+    <ClInclude Include="source\utils.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\basic_search.cpp" />
+    <ClCompile Include="source\book.cpp" />
+    <ClCompile Include="source\chess_ai.cpp" />
+    <ClCompile Include="source\chess_app.cpp" />
+    <ClCompile Include="source\chess_game.cpp" />
+    <ClCompile Include="source\chess_utils.cpp" />
+    <ClCompile Include="source\mid_search.cpp" />
+    <ClCompile Include="source\search.cpp" />
+    <ClCompile Include="source\serach_v2.cpp" />
+    <ClCompile Include="source\surge\position.cpp">
+      <Filter>surge</Filter>
+    </ClCompile>
+    <ClCompile Include="source\surge\tables.cpp">
+      <Filter>surge</Filter>
+    </ClCompile>
+    <ClCompile Include="source\surge\types.cpp">
+      <Filter>surge</Filter>
+    </ClCompile>
+    <ClCompile Include="source\transposition_table.cpp" />
+    <ClCompile Include="source\utils.cpp" />
+  </ItemGroup>
+</Project>

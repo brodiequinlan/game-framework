@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="entity">
+      <UniqueIdentifier>{C2FD7FFB-AE9F-AAD1-975A-BE25839B3122}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="items">
+      <UniqueIdentifier>{2765AC0F-9379-D4C0-5CFB-7720C8CED0F1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="quests">
+      <UniqueIdentifier>{AA81F417-9623-1FEE-7FDE-32426B1FA63E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="state">
+      <UniqueIdentifier>{064A6110-725E-89C1-3BE0-2C21A7B385F2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="world">
+      <UniqueIdentifier>{6D35A710-D949-CFC1-A2CB-72210E9FCBF2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\entity\buff_enemy.h">
+      <Filter>entity</Filter>
+    </ClInclude>
+    <ClInclude Include="source\entity\bullet.h">
+      <Filter>entity</Filter>
+    </ClInclude>
+    <ClInclude Include="source\entity\george.h">
+      <Filter>entity</Filter>
+    </ClInclude>
+    <ClInclude Include="source\entity\meele_enemy.h">
+      <Filter>entity</Filter>
+    </ClInclude>
+    <ClInclude Include="source\entity\player.h">
+      <Filter>entity</Filter>
+    </ClInclude>
+    <ClInclude Include="source\items\gun.h">
+      <Filter>items</Filter>
+    </ClInclude>
+    <ClInclude Include="source\items\machine_gun.h">
+      <Filter>items</Filter>
+    </ClInclude>
+    <ClInclude Include="source\quests\robot_quest.h">
+      <Filter>quests</Filter>
+    </ClInclude>
+    <ClInclude Include="source\state\game_state.h">
+      <Filter>state</Filter>
+    </ClInclude>
+    <ClInclude Include="source\state\menu_state.h">
+      <Filter>state</Filter>
+    </ClInclude>
+    <ClInclude Include="source\world\door.h">
+      <Filter>world</Filter>
+    </ClInclude>
+    <ClInclude Include="source\world\lava.h">
+      <Filter>world</Filter>
+    </ClInclude>
+    <ClInclude Include="source\world\pongworld.h">
+      <Filter>world</Filter>
+    </ClInclude>
+    <ClInclude Include="source\world\robot_spawner.h">
+      <Filter>world</Filter>
+    </ClInclude>
+    <ClInclude Include="source\world\rock.h">
+      <Filter>world</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\entity\buff_enemy.cpp">
+      <Filter>entity</Filter>
+    </ClCompile>
+    <ClCompile Include="source\entity\bullet.cpp">
+      <Filter>entity</Filter>
+    </ClCompile>
+    <ClCompile Include="source\entity\george.cpp">
+      <Filter>entity</Filter>
+    </ClCompile>
+    <ClCompile Include="source\entity\meele_enemy.cpp">
+      <Filter>entity</Filter>
+    </ClCompile>
+    <ClCompile Include="source\entity\player.cpp">
+      <Filter>entity</Filter>
+    </ClCompile>
+    <ClCompile Include="source\items\gun.cpp">
+      <Filter>items</Filter>
+    </ClCompile>
+    <ClCompile Include="source\items\machine_gun.cpp">
+      <Filter>items</Filter>
+    </ClCompile>
+    <ClCompile Include="source\quests\robot_quest.cpp">
+      <Filter>quests</Filter>
+    </ClCompile>
+    <ClCompile Include="source\sandbox.cpp" />
+    <ClCompile Include="source\state\game_state.cpp">
+      <Filter>state</Filter>
+    </ClCompile>
+    <ClCompile Include="source\state\menu_state.cpp">
+      <Filter>state</Filter>
+    </ClCompile>
+    <ClCompile Include="source\world\door.cpp">
+      <Filter>world</Filter>
+    </ClCompile>
+    <ClCompile Include="source\world\lava.cpp">
+      <Filter>world</Filter>
+    </ClCompile>
+    <ClCompile Include="source\world\pongworld.cpp">
+      <Filter>world</Filter>
+    </ClCompile>
+    <ClCompile Include="source\world\robot_spawner.cpp">
+      <Filter>world</Filter>
+    </ClCompile>
+    <ClCompile Include="source\world\rock.cpp">
+      <Filter>world</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

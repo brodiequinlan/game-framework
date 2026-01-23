@@ -29,15 +29,17 @@ public:
 	template <Color us>
 	Move initiate_iterative_search(Position& p, int depth)
 	{
+		m_search_statistics.reset();
 		m_stopping = false;
 		m_tt.clear();
 		Move sel_move;
 		for (int i = 1; i <= depth; ++i)
 		{
 			initiate_search<us>(p, i);
+			m_search_statistics.depth = i;
 			if (m_stopping || m_search_statistics.mate_found) break;
 		}
-		log_search_statistics(m_search_statistics);
+		log_search_statistics("Full search",m_search_statistics);
 		return m_search_statistics.selected_move;
 	}
 
@@ -48,7 +50,7 @@ private:
 	{
 		m_search_statistics.depth = depth;
 		auto start = std::chrono::high_resolution_clock::now();
-		int score = pvs<us>(p, depth, -checkmate_score, checkmate_score,false);
+		pvs<us>(p, depth, -checkmate_score, checkmate_score,false);
 		auto stop = std::chrono::high_resolution_clock::now();
 		auto duration = duration_cast<std::chrono::microseconds>(stop - start);
 		m_search_statistics.ellapsed_ms += duration.count();
@@ -78,6 +80,7 @@ private:
 			m_search_statistics.nodes_searched++;
 			int score = -quiescence<~us>(p, depth + 1, -beta, -alpha);
 			p.undo<us>(move);
+
 			
 			if (score >= beta) return beta;
 			if (score > alpha) alpha = score;
@@ -96,7 +99,9 @@ private:
 
 		auto tt_lookup = m_tt.lookup(p.get_hash(), depth);
 
-		if (tt_lookup.valid && tt_lookup.score != checkmate_score && tt_lookup.score != -checkmate_score && depth != m_search_statistics.depth) 
+		if (tt_lookup.valid && tt_lookup.score != checkmate_score &&
+			tt_lookup.score != -checkmate_score &&
+			depth != m_search_statistics.depth)
 		{
 			if (tt_lookup.depth >= depth) 
 			{
@@ -109,11 +114,11 @@ private:
 
 		bool is_pv = alpha != beta - 1;
 
-		if (depth <= 4 && m_search_statistics.depth >= 7)
+		if (depth <= 3 && m_search_statistics.depth >= 7)
 		{
 			int s_eval = score_board<us>(p);
 			//razering
-			if (s_eval + 190 * depth < beta)
+			if (s_eval + 220 * depth < beta)
 			{
 				int score = quiescence<us>(p, 0, alpha, beta);
 				if (score < beta) return score;
@@ -121,8 +126,9 @@ private:
 			// Reverse futility pruning
 			if (!is_pv && !p.in_check<us>())
 			{
-				if (s_eval - (120 * depth) >= beta) return s_eval;
+				if (s_eval - (150 * depth) >= beta) return s_eval;
 			}
+			
 		}
 
 
@@ -142,7 +148,7 @@ private:
 			p.play<us>(move);
 			m_search_statistics.nodes_searched++;
 			int move_reduct = 0;
-			if (!is_pv && move_num > 1 && moves.size() > 3 && depth >= 3 && !reduced && !move.is_capture()) move_reduct = 2;
+			if (!is_pv && move_num > 3 && moves.size() >= 4 && depth >= 3 && !reduced && !move.is_capture()) move_reduct = 1;
 			int score;
 			if (move_num == 0 || p.in_check<us>())
 			{

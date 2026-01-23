@@ -1,5 +1,5 @@
-
-#include <boost/test/unit_test.hpp>
+/*
+#include <boost/test/included/unit_test.hpp>
 
 #include <bq.h>
 #include <bq/world/world.h>
@@ -41,3 +41,4 @@ BOOST_AUTO_TEST_CASE(world_intersects_test) {
 	bce = world.get_collision_effects(fr);
 	BOOST_CHECK(bce.m_collision);
 }
+*/

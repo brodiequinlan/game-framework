@@ -1,7 +1,6 @@
 #pragma once
 
-#include <bq.h>
-#include <memory>
+
 
 class test_block : public bq::block {
 public:
@@ -10,10 +9,6 @@ public:
 		m_size = { l,w };
 	}
 
-	bool intersects(sf::FloatRect& other) override {
-		sf::FloatRect rect = { m_pos.x, m_pos.y, m_size.x, m_size.y };
-		return rect.intersects(other);
-	}
 	bool contains(float x, float y) override {
 		sf::FloatRect rect = { m_pos.x, m_pos.y, m_size.x, m_size.y };
 		return rect.contains({ x,y });

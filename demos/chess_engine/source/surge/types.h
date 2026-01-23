@@ -199,7 +199,7 @@ enum File : int {
     EFILE,
     FFILE,
     GFILE,
-    HFILE
+    H_FILE
 };
 
 inline File& operator++(File& f) {
@@ -301,11 +301,11 @@ constexpr Bitboard shift(Bitboard b) {
     return D == NORTH ? b << 8 : D == SOUTH       ? b >> 8
                              : D == NORTH + NORTH ? b << 16
                              : D == SOUTH + SOUTH ? b >> 16
-                             : D == EAST          ? (b & ~MASK_FILE[HFILE]) << 1
+                             : D == EAST          ? (b & ~MASK_FILE[H_FILE]) << 1
                              : D == WEST          ? (b & ~MASK_FILE[AFILE]) >> 1
-                             : D == NORTH_EAST    ? (b & ~MASK_FILE[HFILE]) << 9
+                             : D == NORTH_EAST    ? (b & ~MASK_FILE[H_FILE]) << 9
                              : D == NORTH_WEST    ? (b & ~MASK_FILE[AFILE]) << 7
-                             : D == SOUTH_EAST    ? (b & ~MASK_FILE[HFILE]) >> 7
+                             : D == SOUTH_EAST    ? (b & ~MASK_FILE[H_FILE]) >> 7
                              : D == SOUTH_WEST    ? (b & ~MASK_FILE[AFILE]) >> 9
                                                   : 0;
 }

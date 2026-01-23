@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{89AF369E-F58E-B539-FEA6-40106A051C9B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\bq">
+      <UniqueIdentifier>{EB43B8DA-D7FB-F927-4003-D3832CDA9418}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\bq\application">
+      <UniqueIdentifier>{4E60C6D6-3A5A-EF28-23C7-85390F605595}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\bq\core">
+      <UniqueIdentifier>{431F11BF-AFAA-7E83-B8BB-017824C6DA83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\bq\entity">
+      <UniqueIdentifier>{F76D6FCC-6384-6D62-ACFB-F88318513EEA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\bq\event">
+      <UniqueIdentifier>{9CD95CA1-88D2-7BF3-B104-61789D5C5BFF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\bq\exception">
+      <UniqueIdentifier>{8911B27A-75A0-3B44-1EBF-4F3F0A2D4CEA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\bq\graphics">
+      <UniqueIdentifier>{AB409586-17A2-7294-A00F-B9460C70A953}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\bq\gui">
+      <UniqueIdentifier>{DFCCD943-CB9A-CD49-B42E-3E70A09BA9AE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\bq\networking">
+      <UniqueIdentifier>{42089667-AE74-5162-7768-E9BFE39373CA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\bq\quest">
+      <UniqueIdentifier>{EC7335A2-D86C-54F4-019F-3979EDF63300}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\bq\resource">
+      <UniqueIdentifier>{825AA6EE-EEBB-83FC-7729-CAAEE389BABB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\bq\state">
+      <UniqueIdentifier>{9B0759A2-8700-78F4-B032-5D799C8A5700}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\bq\util">
+      <UniqueIdentifier>{38121BBF-A49D-8883-ADAE-0B7819B9E483}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\bq\world">
+      <UniqueIdentifier>{02F39EA2-EEEB-BDF4-171E-A37903769D00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source">
+      <UniqueIdentifier>{76FF3A1C-62A1-65F2-4B5C-7946379DEC42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\application">
+      <UniqueIdentifier>{59C4D3EF-45A8-9445-AE08-8F989A0B7FC7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\core">
+      <UniqueIdentifier>{AEC9BDBA-1A7F-36B0-A373-30870F282DB4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\entity">
+      <UniqueIdentifier>{225FF065-8E1F-6C9C-575A-B519C3D9B078}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\event">
+      <UniqueIdentifier>{67D19E12-5334-2EB7-FCB9-666DE8FBF939}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\exception">
+      <UniqueIdentifier>{D4F67028-C0EF-8F7A-E921-75FFD5796F86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\graphics">
+      <UniqueIdentifier>{96281784-02B4-8448-0BC5-073D77CFE048}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\gui">
+      <UniqueIdentifier>{EA5515B8-D60D-5705-3F15-30612BECF1F5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\networking">
+      <UniqueIdentifier>{ED9631CD-59AD-2F63-A224-BB840E7A00EB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\quest">
+      <UniqueIdentifier>{B76B7713-A3CE-06B8-4C54-3F6E3896D23A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\resource">
+      <UniqueIdentifier>{6D4228EC-D9CD-95B0-E2DE-18A54EE9F1B0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\state">
+      <UniqueIdentifier>{66FF9A13-5262-2AB8-FBE7-626EE729F63A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\util">
+      <UniqueIdentifier>{A3BCC7BA-0F72-40B0-9866-3A87041B37B4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\world">
+      <UniqueIdentifier>{CDEAE013-B94D-70B8-62D3-A86E4E153C3B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\bq.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\bq\application\application.h">
+      <Filter>include\bq\application</Filter>
+    </ClInclude>
+    <ClInclude Include="include\bq\core\astar.h">
+      <Filter>include\bq\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\bq\core\buff.h">
+      <Filter>include\bq\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\bq\core\camera.h">
+      <Filter>include\bq\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\bq\core\game.h">
+      <Filter>include\bq\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\bq\core\handler.h">
+      <Filter>include\bq\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\bq\core\inventory.h">
+      <Filter>include\bq\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\bq\core\item.h">
+      <Filter>include\bq\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\bq\core\logger.h">
+      <Filter>include\bq\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\bq\core\profiler.h">
+      <Filter>include\bq\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\bq\entity\entity.h">
+      <Filter>include\bq\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="include\bq\entity\entity_manager.h">
+      <Filter>include\bq\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="include\bq\entity\particle.h">
+      <Filter>include\bq\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="include\bq\event\event.h">
+      <Filter>include\bq\event</Filter>
+    </ClInclude>
+    <ClInclude Include="include\bq\exception\illegal_state.h">
+      <Filter>include\bq\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="include\bq\graphics\animation.h">
+      <Filter>include\bq\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\bq\graphics\sprite.h">
+      <Filter>include\bq\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\bq\graphics\window.h">
+      <Filter>include\bq\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\bq\gui\Widget.h">
+      <Filter>include\bq\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\bq\gui\button.h">
+      <Filter>include\bq\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\bq\gui\health_bar.h">
+      <Filter>include\bq\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\bq\networking\http_client.h">
+      <Filter>include\bq\networking</Filter>
+    </ClInclude>
+    <ClInclude Include="include\bq\networking\network_result.h">
+      <Filter>include\bq\networking</Filter>
+    </ClInclude>
+    <ClInclude Include="include\bq\quest\quest.h">
+      <Filter>include\bq\quest</Filter>
+    </ClInclude>
+    <ClInclude Include="include\bq\quest\quest_event.h">
+      <Filter>include\bq\quest</Filter>
+    </ClInclude>
+    <ClInclude Include="include\bq\resource\resource_holder.h">
+      <Filter>include\bq\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="include\bq\resource\resource_manager.h">
+      <Filter>include\bq\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="include\bq\state\state.h">
+      <Filter>include\bq\state</Filter>
+    </ClInclude>
+    <ClInclude Include="include\bq\state\state_manager.h">
+      <Filter>include\bq\state</Filter>
+    </ClInclude>
+    <ClInclude Include="include\bq\util\block_collision_effects.h">
+      <Filter>include\bq\util</Filter>
+    </ClInclude>
+    <ClInclude Include="include\bq\util\json.h">
+      <Filter>include\bq\util</Filter>
+    </ClInclude>
+    <ClInclude Include="include\bq\util\noncopyable.h">
+      <Filter>include\bq\util</Filter>
+    </ClInclude>
+    <ClInclude Include="include\bq\util\nonmoveable.h">
+      <Filter>include\bq\util</Filter>
+    </ClInclude>
+    <ClInclude Include="include\bq\util\random.h">
+      <Filter>include\bq\util</Filter>
+    </ClInclude>
+    <ClInclude Include="include\bq\util\rect.h">
+      <Filter>include\bq\util</Filter>
+    </ClInclude>
+    <ClInclude Include="include\bq\util\settings.h">
+      <Filter>include\bq\util</Filter>
+    </ClInclude>
+    <ClInclude Include="include\bq\util\vec.h">
+      <Filter>include\bq\util</Filter>
+    </ClInclude>
+    <ClInclude Include="include\bq\world\block.h">
+      <Filter>include\bq\world</Filter>
+    </ClInclude>
+    <ClInclude Include="include\bq\world\world.h">
+      <Filter>include\bq\world</Filter>
+    </ClInclude>
+    <ClInclude Include="include\bqpch.h">
+      <Filter>include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\application\application.cpp">
+      <Filter>source\application</Filter>
+    </ClCompile>
+    <ClCompile Include="source\bqpch.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\core\astar.cpp">
+      <Filter>source\core</Filter>
+    </ClCompile>
+    <ClCompile Include="source\core\buff.cpp">
+      <Filter>source\core</Filter>
+    </ClCompile>
+    <ClCompile Include="source\core\camera.cpp">
+      <Filter>source\core</Filter>
+    </ClCompile>
+    <ClCompile Include="source\core\game.cpp">
+      <Filter>source\core</Filter>
+    </ClCompile>
+    <ClCompile Include="source\core\handler.cpp">
+      <Filter>source\core</Filter>
+    </ClCompile>
+    <ClCompile Include="source\core\inventory.cpp">
+      <Filter>source\core</Filter>
+    </ClCompile>
+    <ClCompile Include="source\core\item.cpp">
+      <Filter>source\core</Filter>
+    </ClCompile>
+    <ClCompile Include="source\core\logger.cpp">
+      <Filter>source\core</Filter>
+    </ClCompile>
+    <ClCompile Include="source\core\profiler.cpp">
+      <Filter>source\core</Filter>
+    </ClCompile>
+    <ClCompile Include="source\entity\entity.cpp">
+      <Filter>source\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="source\entity\entity_manager.cpp">
+      <Filter>source\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="source\entity\particle.cpp">
+      <Filter>source\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="source\event\event.cpp">
+      <Filter>source\event</Filter>
+    </ClCompile>
+    <ClCompile Include="source\exception\illegal_state.cpp">
+      <Filter>source\exception</Filter>
+    </ClCompile>
+    <ClCompile Include="source\graphics\animation.cpp">
+      <Filter>source\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="source\graphics\sprite.cpp">
+      <Filter>source\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="source\graphics\window.cpp">
+      <Filter>source\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="source\gui\button.cpp">
+      <Filter>source\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="source\gui\health_bar.cpp">
+      <Filter>source\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="source\networking\http_client.cpp">
+      <Filter>source\networking</Filter>
+    </ClCompile>
+    <ClCompile Include="source\quest\quest.cpp">
+      <Filter>source\quest</Filter>
+    </ClCompile>
+    <ClCompile Include="source\quest\quest_event.cpp">
+      <Filter>source\quest</Filter>
+    </ClCompile>
+    <ClCompile Include="source\resource\resource_holder.cpp">
+      <Filter>source\resource</Filter>
+    </ClCompile>
+    <ClCompile Include="source\state\state_manager.cpp">
+      <Filter>source\state</Filter>
+    </ClCompile>
+    <ClCompile Include="source\util\json_array.cpp">
+      <Filter>source\util</Filter>
+    </ClCompile>
+    <ClCompile Include="source\util\random.cpp">
+      <Filter>source\util</Filter>
+    </ClCompile>
+    <ClCompile Include="source\util\rect.cpp">
+      <Filter>source\util</Filter>
+    </ClCompile>
+    <ClCompile Include="source\util\vec.cpp">
+      <Filter>source\util</Filter>
+    </ClCompile>
+    <ClCompile Include="source\world\block.cpp">
+      <Filter>source\world</Filter>
+    </ClCompile>
+    <ClCompile Include="source\world\world.cpp">
+      <Filter>source\world</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

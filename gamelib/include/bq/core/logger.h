@@ -1,8 +1,7 @@
 #pragma once
-
 #undef PLATFORM_WINDOWS
 #ifdef PLATFORM_WINDOWS
-#include <windows.h>
+#include <Windows.h>
 #endif
 
 #include <fstream>
@@ -111,4 +110,3 @@ namespace bq {
 		}
 	};
 }
-#define PLATFORM_WINDOWS

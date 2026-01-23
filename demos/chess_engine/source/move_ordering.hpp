@@ -20,8 +20,6 @@ void order_moves(Position& p, MoveList<Us>& moves, transposition_table& tt, bool
             if (b.flags() != QUIET) {
                 bscore += 5;
             }
-            //ascore += piece_values_c[p.at(a.to())] - piece_values_c[p.at(a.from())];
-            //bscore += piece_values_c[p.at(b.to())] - piece_values_c[p.at(b.from())];
             return ascore > bscore;
             });
     }

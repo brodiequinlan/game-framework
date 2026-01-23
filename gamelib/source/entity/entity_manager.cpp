@@ -46,10 +46,11 @@ void bq::entity_manager::add_marked() {
 void bq::entity_manager::update() {
 
 	for (std::unique_ptr<entity>& e : m_entities) {
-		if (e->should_cull(bq::handler::get().cam()->view())) {
-			m_to_remove.push_back(e.get());
-		}
-		else e->update();
+			if (e->should_cull(bq::handler::get().cam()->view())) {
+				m_to_remove.push_back(e.get());
+			}
+			else e->update();
+		
 	}
 	remove_marked();
 	add_marked();
