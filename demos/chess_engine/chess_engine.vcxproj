@@ -115,15 +115,12 @@
     <ClInclude Include="source\utils.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="source\basic_search.cpp" />
-    <ClCompile Include="source\book.cpp" />
     <ClCompile Include="source\chess_ai.cpp" />
     <ClCompile Include="source\chess_app.cpp" />
     <ClCompile Include="source\chess_game.cpp" />
     <ClCompile Include="source\chess_utils.cpp" />
     <ClCompile Include="source\mid_search.cpp" />
     <ClCompile Include="source\search.cpp" />
-    <ClCompile Include="source\serach_v2.cpp" />
     <ClCompile Include="source\surge\position.cpp" />
     <ClCompile Include="source\surge\tables.cpp" />
     <ClCompile Include="source\surge\types.cpp" />

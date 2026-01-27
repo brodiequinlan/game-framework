@@ -23,7 +23,11 @@ class basic_search {
 public:
 
 
-	void signal_stop();
+	void signal_stop()
+	{
+		m_stopping = true;
+	}
+
 
 	template <Color us>
 	Move initiate_iterative_search(Position& p, int depth)

@@ -505,3 +505,4 @@ template <Color C>
 constexpr Bitboard ignore_ooo_danger() {
     return C == WHITE ? 0x2 : 0x200000000000000;
 }
+

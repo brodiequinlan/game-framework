@@ -29,12 +29,12 @@ class transposition_table {
 public:
 	std::unordered_map<std::string, int> move_scores;
 
-	uint64_t max_size = 10000000000;
+	static constexpr size_t MAX_TT_SIZE = 4'000'000; // ~4M entries
 
 	transposition_table();
 
 	Move 		selected_move();
-	tt_entry    lookup(uint64_t hash, int depth);
+	tt_entry    lookup(uint64_t hash);
 	void 	 	set_top_move(Move m);
 	void 		insert(uint64_t hash, tt_entry entry);
 	void 		clear();

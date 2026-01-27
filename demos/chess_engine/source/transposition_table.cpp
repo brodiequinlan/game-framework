@@ -8,20 +8,21 @@ transposition_table::transposition_table()
 
 void transposition_table::clear()
 {
-    if(m_table.size() > max_tt_size)
-        m_table.clear();
+    m_table.clear();
 }
-void transposition_table::insert(uint64_t hash, tt_entry entry) 
+void transposition_table::insert(uint64_t hash, tt_entry entry)
 {
-    std::lock_guard<std::mutex> lock(m_insertion_mutex);
-    m_table[hash] = entry;
-}
-tt_entry transposition_table::lookup(uint64_t hash, int depth) 
-{
-    if (m_table.find(hash) != m_table.end()) 
+    auto it = m_table.find(hash);
+    if (it == m_table.end() || entry.depth >= it->second.depth)
     {
-        return m_table[hash];
+        m_table[hash] = entry;
     }
+}
+tt_entry transposition_table::lookup(uint64_t hash) 
+{
+    auto it = m_table.find(hash);
+    if (it != m_table.end())
+        return it->second;
     return m_invalid_entry;
 }
 void transposition_table::set_top_move(Move m)

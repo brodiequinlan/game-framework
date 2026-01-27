@@ -96,7 +96,7 @@ private:
 
 		int orig_alpha = alpha;
 
-		auto tt_lookup = m_tt.lookup(p.get_hash(), depth);
+		auto tt_lookup = m_tt.lookup(p.get_hash());
 
 		if (tt_lookup.valid && tt_lookup.score != checkmate_score && tt_lookup.score != -checkmate_score && depth != m_search_statistics.depth)
 		{
